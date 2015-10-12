@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6B9EF0551BCB5F3A0080813C /* ViewControllerThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9EF0541BCB5F3A0080813C /* ViewControllerThree.m */; settings = {ASSET_TAGS = (); }; };
+		6B9EF0561BCB5F3A0080813C /* ViewControllerThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9EF0541BCB5F3A0080813C /* ViewControllerThree.m */; settings = {ASSET_TAGS = (); }; };
+		6B9EF0571BCB5F3A0080813C /* ViewControllerThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9EF0541BCB5F3A0080813C /* ViewControllerThree.m */; settings = {ASSET_TAGS = (); }; };
+		6BAF9A521BC79B450042019D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF9A511BC79B450042019D /* main.m */; };
+		6BAF9A551BC79B450042019D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF9A541BC79B450042019D /* AppDelegate.m */; };
+		6BAF9A581BC79B450042019D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF9A571BC79B450042019D /* ViewController.m */; };
+		6BAF9A5B1BC79B450042019D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BAF9A591BC79B450042019D /* Main.storyboard */; };
+		6BAF9A5D1BC79B450042019D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BAF9A5C1BC79B450042019D /* Assets.xcassets */; };
+		6BAF9A601BC79B450042019D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BAF9A5E1BC79B450042019D /* LaunchScreen.storyboard */; };
+		6BAF9A6B1BC79B450042019D /* SMTNavigationBarDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF9A6A1BC79B450042019D /* SMTNavigationBarDemoTests.m */; };
+		6BAF9A761BC79B450042019D /* SMTNavigationBarDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF9A751BC79B450042019D /* SMTNavigationBarDemoUITests.m */; };
+		6BAF9A881BC79C3D0042019D /* SMTSharedNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF9A851BC79C3D0042019D /* SMTSharedNavigationBar.m */; settings = {ASSET_TAGS = (); }; };
+		6BAF9A891BC79C3D0042019D /* UIViewController+SMTNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF9A871BC79C3D0042019D /* UIViewController+SMTNavigationBar.m */; settings = {ASSET_TAGS = (); }; };
+		6BAF9A8C1BC7A1440042019D /* ViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF9A8B1BC7A1440042019D /* ViewControllerTwo.m */; settings = {ASSET_TAGS = (); }; };
+		6BAF9A8D1BC7A1440042019D /* ViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF9A8B1BC7A1440042019D /* ViewControllerTwo.m */; settings = {ASSET_TAGS = (); }; };
+		6BAF9A8E1BC7A1440042019D /* ViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF9A8B1BC7A1440042019D /* ViewControllerTwo.m */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6BAF9A671BC79B450042019D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BAF9A451BC79B450042019D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BAF9A4C1BC79B450042019D;
+			remoteInfo = SMTNavigationBarDemo;
+		};
+		6BAF9A721BC79B450042019D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BAF9A451BC79B450042019D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BAF9A4C1BC79B450042019D;
+			remoteInfo = SMTNavigationBarDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6B9EF0531BCB5F3A0080813C /* ViewControllerThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerThree.h; sourceTree = "<group>"; };
+		6B9EF0541BCB5F3A0080813C /* ViewControllerThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerThree.m; sourceTree = "<group>"; };
+		6BAF9A4D1BC79B450042019D /* SMTNavigationBarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMTNavigationBarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BAF9A511BC79B450042019D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6BAF9A531BC79B450042019D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6BAF9A541BC79B450042019D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6BAF9A561BC79B450042019D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6BAF9A571BC79B450042019D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6BAF9A5A1BC79B450042019D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6BAF9A5C1BC79B450042019D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6BAF9A5F1BC79B450042019D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6BAF9A611BC79B450042019D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BAF9A661BC79B450042019D /* SMTNavigationBarDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMTNavigationBarDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BAF9A6A1BC79B450042019D /* SMTNavigationBarDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMTNavigationBarDemoTests.m; sourceTree = "<group>"; };
+		6BAF9A6C1BC79B450042019D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BAF9A711BC79B450042019D /* SMTNavigationBarDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMTNavigationBarDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BAF9A751BC79B450042019D /* SMTNavigationBarDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMTNavigationBarDemoUITests.m; sourceTree = "<group>"; };
+		6BAF9A771BC79B450042019D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BAF9A841BC79C3D0042019D /* SMTSharedNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTSharedNavigationBar.h; sourceTree = "<group>"; };
+		6BAF9A851BC79C3D0042019D /* SMTSharedNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTSharedNavigationBar.m; sourceTree = "<group>"; };
+		6BAF9A861BC79C3D0042019D /* UIViewController+SMTNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SMTNavigationBar.h"; sourceTree = "<group>"; };
+		6BAF9A871BC79C3D0042019D /* UIViewController+SMTNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SMTNavigationBar.m"; sourceTree = "<group>"; };
+		6BAF9A8A1BC7A1440042019D /* ViewControllerTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerTwo.h; sourceTree = "<group>"; };
+		6BAF9A8B1BC7A1440042019D /* ViewControllerTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTwo.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6BAF9A4A1BC79B450042019D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BAF9A631BC79B450042019D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BAF9A6E1BC79B450042019D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6BAF9A441BC79B450042019D = {
+			isa = PBXGroup;
+			children = (
+				6BAF9A4F1BC79B450042019D /* SMTNavigationBarDemo */,
+				6BAF9A691BC79B450042019D /* SMTNavigationBarDemoTests */,
+				6BAF9A741BC79B450042019D /* SMTNavigationBarDemoUITests */,
+				6BAF9A4E1BC79B450042019D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6BAF9A4E1BC79B450042019D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6BAF9A4D1BC79B450042019D /* SMTNavigationBarDemo.app */,
+				6BAF9A661BC79B450042019D /* SMTNavigationBarDemoTests.xctest */,
+				6BAF9A711BC79B450042019D /* SMTNavigationBarDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6BAF9A4F1BC79B450042019D /* SMTNavigationBarDemo */ = {
+			isa = PBXGroup;
+			children = (
+				6BAF9A831BC79C3D0042019D /* SMTNavigationBar */,
+				6BAF9A531BC79B450042019D /* AppDelegate.h */,
+				6BAF9A541BC79B450042019D /* AppDelegate.m */,
+				6BAF9A561BC79B450042019D /* ViewController.h */,
+				6BAF9A571BC79B450042019D /* ViewController.m */,
+				6BAF9A591BC79B450042019D /* Main.storyboard */,
+				6BAF9A5C1BC79B450042019D /* Assets.xcassets */,
+				6BAF9A5E1BC79B450042019D /* LaunchScreen.storyboard */,
+				6BAF9A611BC79B450042019D /* Info.plist */,
+				6BAF9A501BC79B450042019D /* Supporting Files */,
+				6BAF9A8A1BC7A1440042019D /* ViewControllerTwo.h */,
+				6BAF9A8B1BC7A1440042019D /* ViewControllerTwo.m */,
+				6B9EF0531BCB5F3A0080813C /* ViewControllerThree.h */,
+				6B9EF0541BCB5F3A0080813C /* ViewControllerThree.m */,
+			);
+			path = SMTNavigationBarDemo;
+			sourceTree = "<group>";
+		};
+		6BAF9A501BC79B450042019D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6BAF9A511BC79B450042019D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6BAF9A691BC79B450042019D /* SMTNavigationBarDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				6BAF9A6A1BC79B450042019D /* SMTNavigationBarDemoTests.m */,
+				6BAF9A6C1BC79B450042019D /* Info.plist */,
+			);
+			path = SMTNavigationBarDemoTests;
+			sourceTree = "<group>";
+		};
+		6BAF9A741BC79B450042019D /* SMTNavigationBarDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6BAF9A751BC79B450042019D /* SMTNavigationBarDemoUITests.m */,
+				6BAF9A771BC79B450042019D /* Info.plist */,
+			);
+			path = SMTNavigationBarDemoUITests;
+			sourceTree = "<group>";
+		};
+		6BAF9A831BC79C3D0042019D /* SMTNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				6BAF9A861BC79C3D0042019D /* UIViewController+SMTNavigationBar.h */,
+				6BAF9A871BC79C3D0042019D /* UIViewController+SMTNavigationBar.m */,
+				6BAF9A841BC79C3D0042019D /* SMTSharedNavigationBar.h */,
+				6BAF9A851BC79C3D0042019D /* SMTSharedNavigationBar.m */,
+			);
+			path = SMTNavigationBar;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6BAF9A4C1BC79B450042019D /* SMTNavigationBarDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BAF9A7A1BC79B450042019D /* Build configuration list for PBXNativeTarget "SMTNavigationBarDemo" */;
+			buildPhases = (
+				6BAF9A491BC79B450042019D /* Sources */,
+				6BAF9A4A1BC79B450042019D /* Frameworks */,
+				6BAF9A4B1BC79B450042019D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SMTNavigationBarDemo;
+			productName = SMTNavigationBarDemo;
+			productReference = 6BAF9A4D1BC79B450042019D /* SMTNavigationBarDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6BAF9A651BC79B450042019D /* SMTNavigationBarDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BAF9A7D1BC79B450042019D /* Build configuration list for PBXNativeTarget "SMTNavigationBarDemoTests" */;
+			buildPhases = (
+				6BAF9A621BC79B450042019D /* Sources */,
+				6BAF9A631BC79B450042019D /* Frameworks */,
+				6BAF9A641BC79B450042019D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6BAF9A681BC79B450042019D /* PBXTargetDependency */,
+			);
+			name = SMTNavigationBarDemoTests;
+			productName = SMTNavigationBarDemoTests;
+			productReference = 6BAF9A661BC79B450042019D /* SMTNavigationBarDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6BAF9A701BC79B450042019D /* SMTNavigationBarDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BAF9A801BC79B450042019D /* Build configuration list for PBXNativeTarget "SMTNavigationBarDemoUITests" */;
+			buildPhases = (
+				6BAF9A6D1BC79B450042019D /* Sources */,
+				6BAF9A6E1BC79B450042019D /* Frameworks */,
+				6BAF9A6F1BC79B450042019D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6BAF9A731BC79B450042019D /* PBXTargetDependency */,
+			);
+			name = SMTNavigationBarDemoUITests;
+			productName = SMTNavigationBarDemoUITests;
+			productReference = 6BAF9A711BC79B450042019D /* SMTNavigationBarDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6BAF9A451BC79B450042019D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = iamsteffi.com;
+				TargetAttributes = {
+					6BAF9A4C1BC79B450042019D = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					6BAF9A651BC79B450042019D = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 6BAF9A4C1BC79B450042019D;
+					};
+					6BAF9A701BC79B450042019D = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 6BAF9A4C1BC79B450042019D;
+					};
+				};
+			};
+			buildConfigurationList = 6BAF9A481BC79B450042019D /* Build configuration list for PBXProject "SMTNavigationBarDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6BAF9A441BC79B450042019D;
+			productRefGroup = 6BAF9A4E1BC79B450042019D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6BAF9A4C1BC79B450042019D /* SMTNavigationBarDemo */,
+				6BAF9A651BC79B450042019D /* SMTNavigationBarDemoTests */,
+				6BAF9A701BC79B450042019D /* SMTNavigationBarDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6BAF9A4B1BC79B450042019D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BAF9A601BC79B450042019D /* LaunchScreen.storyboard in Resources */,
+				6BAF9A5D1BC79B450042019D /* Assets.xcassets in Resources */,
+				6BAF9A5B1BC79B450042019D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BAF9A641BC79B450042019D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BAF9A6F1BC79B450042019D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6BAF9A491BC79B450042019D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BAF9A581BC79B450042019D /* ViewController.m in Sources */,
+				6BAF9A551BC79B450042019D /* AppDelegate.m in Sources */,
+				6BAF9A521BC79B450042019D /* main.m in Sources */,
+				6BAF9A8C1BC7A1440042019D /* ViewControllerTwo.m in Sources */,
+				6BAF9A881BC79C3D0042019D /* SMTSharedNavigationBar.m in Sources */,
+				6B9EF0551BCB5F3A0080813C /* ViewControllerThree.m in Sources */,
+				6BAF9A891BC79C3D0042019D /* UIViewController+SMTNavigationBar.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BAF9A621BC79B450042019D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B9EF0561BCB5F3A0080813C /* ViewControllerThree.m in Sources */,
+				6BAF9A6B1BC79B450042019D /* SMTNavigationBarDemoTests.m in Sources */,
+				6BAF9A8D1BC7A1440042019D /* ViewControllerTwo.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BAF9A6D1BC79B450042019D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B9EF0571BCB5F3A0080813C /* ViewControllerThree.m in Sources */,
+				6BAF9A761BC79B450042019D /* SMTNavigationBarDemoUITests.m in Sources */,
+				6BAF9A8E1BC7A1440042019D /* ViewControllerTwo.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6BAF9A681BC79B450042019D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6BAF9A4C1BC79B450042019D /* SMTNavigationBarDemo */;
+			targetProxy = 6BAF9A671BC79B450042019D /* PBXContainerItemProxy */;
+		};
+		6BAF9A731BC79B450042019D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6BAF9A4C1BC79B450042019D /* SMTNavigationBarDemo */;
+			targetProxy = 6BAF9A721BC79B450042019D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6BAF9A591BC79B450042019D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BAF9A5A1BC79B450042019D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6BAF9A5E1BC79B450042019D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BAF9A5F1BC79B450042019D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6BAF9A781BC79B450042019D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6BAF9A791BC79B450042019D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6BAF9A7B1BC79B450042019D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SMTNavigationBarDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iamsteffi.SMTNavigationBarDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6BAF9A7C1BC79B450042019D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SMTNavigationBarDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iamsteffi.SMTNavigationBarDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6BAF9A7E1BC79B450042019D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SMTNavigationBarDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iamsteffi.SMTNavigationBarDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMTNavigationBarDemo.app/SMTNavigationBarDemo";
+			};
+			name = Debug;
+		};
+		6BAF9A7F1BC79B450042019D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SMTNavigationBarDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iamsteffi.SMTNavigationBarDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMTNavigationBarDemo.app/SMTNavigationBarDemo";
+			};
+			name = Release;
+		};
+		6BAF9A811BC79B450042019D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SMTNavigationBarDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iamsteffi.SMTNavigationBarDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SMTNavigationBarDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		6BAF9A821BC79B450042019D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SMTNavigationBarDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iamsteffi.SMTNavigationBarDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SMTNavigationBarDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6BAF9A481BC79B450042019D /* Build configuration list for PBXProject "SMTNavigationBarDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BAF9A781BC79B450042019D /* Debug */,
+				6BAF9A791BC79B450042019D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BAF9A7A1BC79B450042019D /* Build configuration list for PBXNativeTarget "SMTNavigationBarDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BAF9A7B1BC79B450042019D /* Debug */,
+				6BAF9A7C1BC79B450042019D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BAF9A7D1BC79B450042019D /* Build configuration list for PBXNativeTarget "SMTNavigationBarDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BAF9A7E1BC79B450042019D /* Debug */,
+				6BAF9A7F1BC79B450042019D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BAF9A801BC79B450042019D /* Build configuration list for PBXNativeTarget "SMTNavigationBarDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BAF9A811BC79B450042019D /* Debug */,
+				6BAF9A821BC79B450042019D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6BAF9A451BC79B450042019D /* Project object */;
+}

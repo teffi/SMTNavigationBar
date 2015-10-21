@@ -57,6 +57,24 @@ typedef void (^RightAction_BlockSelector)(UIViewController * vc);
  *  @param isDefault BOOL : Setting to YES will include this on [loadDefaults]
  *  @param isPop     BOOL : YES if the button calls popViewController:Animated
  */
+
+-(void)setTitle:(NSString *)title;
+/**
+ * Set navigation bar title
+ *
+ * @param title     NSString : title
+ *
+ */
+
+-(void)setTitleViewWithImage:(UIImage *)image;
+/**
+ * Set navigation bar title with image
+ *
+ * @param image       UIImage : image
+ * @param title     NSString : title
+ *
+ */
+
 -(void)setLeftBarButtonItemWithKey:(NSString *)key isDefault:(BOOL)isDefault isPop:(BOOL)isPop;
 /**
  *  Set left bar button item with additional selector block.

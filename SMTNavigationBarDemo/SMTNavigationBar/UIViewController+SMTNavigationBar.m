@@ -34,6 +34,27 @@ typedef enum BUTTON_SELECTORS{
     [[self getSharedNavBar] addToButtonList:key button:btn];
 }
 
+
+#pragma mark - Create title view
+#pragma mark -
+-(void)setTitle:(NSString *)title{
+
+    self.navigationItem.title = title;
+    
+}
+
+-(void)setTitleViewWithImage:(UIImage *)image{
+
+    //UIView * uView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 30)];
+   // UIImageView *imgView = [[UIImageView alloc] initWithImage:image];
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 3, 44)];
+    imgView.contentMode = UIViewContentModeScaleAspectFill;
+    imgView.clipsToBounds = NO;
+    imgView.image = image;
+    self.navigationItem.titleView = imgView;
+
+}
+
 #pragma mark - Left bar buttons
 #pragma mark -
 

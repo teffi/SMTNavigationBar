@@ -37,8 +37,13 @@ typedef void (^LeftDefault_BlockSelector)(UIViewController * vc);
 @interface SMTSharedNavigationBar : NSObject
 
 @property(strong,readonly)NSMutableDictionary * buttonList;
+@property(strong,readonly)NSMutableDictionary * titleList;
+
 @property(nonatomic,strong)UIButton * defaultLeftButton;
 @property(nonatomic,strong)UIButton * defaultRightButton;
+
+@property(nonatomic, strong)NSString * defaultTitle;
+
 @property(nonatomic)BOOL willHideBackBtnAlways;
 @property(nonatomic)BOOL getLeftSuperBlock;
 @property(nonatomic,strong)UIViewController * selfReference;
@@ -47,6 +52,8 @@ typedef void (^LeftDefault_BlockSelector)(UIViewController * vc);
 @property(nonatomic,copy)LeftAction_BlockSelector leftActionBlock;
 @property(nonatomic,copy)RightAction_BlockSelector rightActionBlock;
 -(void)addToButtonList:(NSString *)key button:(UIButton *)btn;
+-(void)addTitleList:(NSString *)key title:(NSString *)title;
+
 -(void)runLeftActionBlockSelector:(LeftAction_BlockSelector)block;
 -(void)runRightActionBlockSelector:(RightAction_BlockSelector)block;
 

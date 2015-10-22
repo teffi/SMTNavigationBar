@@ -58,11 +58,16 @@ typedef void (^RightAction_BlockSelector)(UIViewController * vc);
  *  @param isPop     BOOL : YES if the button calls popViewController:Animated
  */
 
--(void)setTitle:(NSString *)title;
+-(void)createTitleWithKey:(NSString *)key title:(NSString *)title;
+
+//-(void)setTitle:(NSString *)title;
+-(void)setTitle:(NSString *)title key:(NSString *)key isDefault:(BOOL)isDefault;
 /**
  * Set navigation bar title
  *
  * @param title     NSString : title
+ * @param key       NSString : key
+ * @param isDefault BOOL     : isDefault
  *
  */
 

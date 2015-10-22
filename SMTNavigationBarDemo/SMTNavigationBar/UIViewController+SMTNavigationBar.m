@@ -34,25 +34,38 @@ typedef enum BUTTON_SELECTORS{
     [[self getSharedNavBar] addToButtonList:key button:btn];
 }
 
+-(void)createTitleWithKey:(NSString *)key title:(NSString *)title{
+
+    [[self getSharedNavBar] addTitleList:key title:title];
+    self.navigationItem.title = title;
+}
+
 
 #pragma mark - Create title view
 #pragma mark -
--(void)setTitle:(NSString *)title{
-
-    self.navigationItem.title = title;
+-(void)setTitle:(NSString *)title key:(NSString *)key isDefault:(BOOL)isDefault{
     
+    [[self getSharedNavBar].titleList setObject:title forKey:key];
+    NSString * titleStr = [(NSString *)[self getSharedNavBar].titleList valueForKey:key];
+   // [self getSharedNavBar].defaultTitleView = isDefault? view:title;
+    
+    if(isDefault){
+    [self getSharedNavBar].defaultTitle = titleStr;
+    }
+    else{
+        self.navigationItem.title = title;
+        //NSLog(@"settitleview : %@", self.navigationItem.title);
+        [self getSharedNavBar].defaultTitle = nil;
+    }
 }
 
 -(void)setTitleViewWithImage:(UIImage *)image{
-
-    //UIView * uView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 30)];
-   // UIImageView *imgView = [[UIImageView alloc] initWithImage:image];
+    
     UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 3, 44)];
     imgView.contentMode = UIViewContentModeScaleAspectFill;
     imgView.clipsToBounds = NO;
     imgView.image = image;
     self.navigationItem.titleView = imgView;
-
 }
 
 #pragma mark - Left bar buttons
@@ -152,6 +165,10 @@ typedef enum BUTTON_SELECTORS{
     
     if(snb.defaultRightButton){
         self.navigationItem.rightBarButtonItem = [self convertToBarButtonItem:snb.defaultRightButton withSelector:RIGHT_BUTTON_ACTION];
+    }
+    
+    if (snb.defaultTitle) {
+        self.navigationItem.title = snb.defaultTitle;
     }
 }
 

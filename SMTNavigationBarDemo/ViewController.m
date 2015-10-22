@@ -20,6 +20,7 @@
     [self willHideBackButton:YES isAlways:YES];
    // [self setTitle:@"FIRST"];
     [self createButtons];
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -31,7 +32,7 @@
     
     [self setLeftBarButtonItemWithKey:@"leftBtn" isDefault:YES isPop:YES];
     [self setRightBarButtonItemWithKey:@"rightBtn" isDefault:YES];
-    
+    [self setTitle:@"HELLO WORLD" key:@"title" isDefault:YES];
     [self performSegueWithIdentifier:@"pushSegue" sender:sender];
     // With selector
 }
@@ -75,7 +76,11 @@
     [self createButtonWithKey:@"leftBtn" button:leftBtn];
     [self createButtonWithKey:@"rightBtn" button:rightBtn];
     
-    [self setTitleViewWithImage:[UIImage imageNamed:@"logo.png"]];
+    [self createTitleWithKey:@"title" title:@"Hello World"];
+    
+    [self setRightBarButtonItemWithKey:@"rightBtn" isDefault:YES];
+    
+   // [self setTitleViewWithImage:[UIImage imageNamed:@"logo.png"]];
     
 }
 

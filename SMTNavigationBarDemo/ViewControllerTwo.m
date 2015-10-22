@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self setTitleViewWithImage:[UIImage imageNamed:@"logo.png"]];
+   // [self setTitleViewWithImage:[UIImage imageNamed:@"logo.png"]];
 
 }
 

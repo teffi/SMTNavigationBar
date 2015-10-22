@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self setRightBarButtonItemWithKey:@"rightBtn" isDefault:YES];
+    [self setTitle:@"NANANANAN" key:@"title" isDefault:NO];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -30,7 +33,16 @@
 
 -(IBAction)pop:(id)sender{
     [self.navigationController popViewControllerAnimated:YES];
+    [self setRightBarButtonItemWithKey:@"rightBtn" isDefault:NO];
 }
+
+-(void)SMTNavigationBarDidTapLeftItem{
+
+    [self.navigationController popViewControllerAnimated:YES];
+    [self setRightBarButtonItemWithKey:@"rightBtn" isDefault:NO];
+    
+}
+
 
 -(void)SMTNavigationBarDidTapRightItem{
     UIAlertController * c = [UIAlertController alertControllerWithTitle:@"Alert" message:@"You've tapped the right bar button item on third vc" preferredStyle:UIAlertControllerStyleAlert];

@@ -19,6 +19,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
    // [self setTitleViewWithImage:[UIImage imageNamed:@"logo.png"]];
+    [self setTitle:@"ABC" key:@"title" isDefault:NO];
+   // [self setTitleViewWithImage:[UIImage imageNamed:@"eily.jpg"] key:@"titleImg" isDefault:NO];
+
+
 
 }
 

@@ -21,18 +21,23 @@
    // [self setTitle:@"FIRST"];
     [self createButtons];
     
+    //[self setTitle:@"HELLO WORLD" key:@"title" isDefault:YES];
+    
+    [self setTitleViewWithImage:[UIImage imageNamed:@"logo.png"] key:@"titleImg" isDefault:NO];
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    
     [self clearSMTNavigationBar];
     [self resetSMTNavigationBar];
+     [self loadDefaults];
 }
 
 -(IBAction)bothCustomDefault:(id)sender{
     
     [self setLeftBarButtonItemWithKey:@"leftBtn" isDefault:YES isPop:YES];
     [self setRightBarButtonItemWithKey:@"rightBtn" isDefault:YES];
-    [self setTitle:@"HELLO WORLD" key:@"title" isDefault:YES];
     [self performSegueWithIdentifier:@"pushSegue" sender:sender];
     // With selector
 }
@@ -51,7 +56,7 @@
         
      }];
 
-    [self setRightBarButtonItemWithKey:@"rightBtn" isDefault:NO];
+  //  [self setRightBarButtonItemWithKey:@"rightBtn" isDefault:NO];
     
     [self performSegueWithIdentifier:@"pushSegue" sender:sender];
 }
@@ -75,12 +80,10 @@
     //Create key value buttons. Access universally via SMTNavigationBar
     [self createButtonWithKey:@"leftBtn" button:leftBtn];
     [self createButtonWithKey:@"rightBtn" button:rightBtn];
-    
-    [self createTitleWithKey:@"title" title:@"Hello World"];
-    
-    [self setRightBarButtonItemWithKey:@"rightBtn" isDefault:YES];
-    
-   // [self setTitleViewWithImage:[UIImage imageNamed:@"logo.png"]];
+  //  [self createTitleWithKey:@"title"];
+
+  //  [self createTitleViewWithKey:@"titleImg" titleImg:[UIImage imageNamed:@"logo.png"]];
+    [self createTitleViewWithKey:@"titleImg"];
     
 }
 

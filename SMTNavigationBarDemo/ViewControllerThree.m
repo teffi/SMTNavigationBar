@@ -17,8 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    [self setRightBarButtonItemWithKey:@"rightBtn" isDefault:YES];
+
     [self setTitle:@"NANANANAN" key:@"title" isDefault:NO];
 }
 
@@ -33,13 +32,11 @@
 
 -(IBAction)pop:(id)sender{
     [self.navigationController popViewControllerAnimated:YES];
-    [self setRightBarButtonItemWithKey:@"rightBtn" isDefault:NO];
 }
 
 -(void)SMTNavigationBarDidTapLeftItem{
 
     [self.navigationController popViewControllerAnimated:YES];
-    [self setRightBarButtonItemWithKey:@"rightBtn" isDefault:NO];
     
 }
 

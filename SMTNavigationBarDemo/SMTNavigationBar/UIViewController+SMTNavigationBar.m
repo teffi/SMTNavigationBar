@@ -34,19 +34,25 @@ typedef enum BUTTON_SELECTORS{
     [[self getSharedNavBar] addToButtonList:key button:btn];
 }
 
--(void)createTitleWithKey:(NSString *)key title:(NSString *)title{
-
-    [[self getSharedNavBar] addTitleList:key title:title];
-    self.navigationItem.title = title;
+-(void)createTitleWithKey:(NSString *)key{
+    [[self getSharedNavBar] addTitleList:key title:@""];
 }
 
+//-(void)createTitleViewWithKey:(NSString *)key titleImg:(UIImage *)titleImg{
 
-#pragma mark - Create title view
+-(void)createTitleViewWithKey:(NSString *)key{
+ 
+    [[self getSharedNavBar] addTitleViewList:key titleView:nil];
+
+}
+
+#pragma mark - Set title view
 #pragma mark -
 -(void)setTitle:(NSString *)title key:(NSString *)key isDefault:(BOOL)isDefault{
     
     [[self getSharedNavBar].titleList setObject:title forKey:key];
     NSString * titleStr = [(NSString *)[self getSharedNavBar].titleList valueForKey:key];
+    
    // [self getSharedNavBar].defaultTitleView = isDefault? view:title;
     
     if(isDefault){
@@ -54,19 +60,38 @@ typedef enum BUTTON_SELECTORS{
     }
     else{
         self.navigationItem.title = title;
-        //NSLog(@"settitleview : %@", self.navigationItem.title);
-        [self getSharedNavBar].defaultTitle = nil;
     }
 }
 
--(void)setTitleViewWithImage:(UIImage *)image{
+-(void)setTitleViewWithImage:(UIImage *)image key:(NSString *)key isDefault:(BOOL)isDefault{
+
+    [[self getSharedNavBar].titleViewList setObject:image forKey:key];
+    UIImage * img = [(UIImage *)[self getSharedNavBar].titleViewList valueForKey:key];
+    
+    if (isDefault) {
+        [self getSharedNavBar].defaultTitleView = img;
+        [self getSharedNavBar].imgView.image = [self getSharedNavBar].defaultTitleView;
+        self.navigationItem.titleView = [self getSharedNavBar].imgView;
+    }
+    else{
+        [self getSharedNavBar].imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 3, 44)];
+        [self getSharedNavBar].imgView.contentMode = UIViewContentModeScaleAspectFill;
+        [self getSharedNavBar].imgView.clipsToBounds = NO;
+        [self getSharedNavBar].imgView.image = img;
+        self.navigationItem.titleView = [self getSharedNavBar].imgView;
+    }
+        NSLog(@"titleimg : %@", [self getSharedNavBar].imgView.image);
+
+}
+
+/**-(void)setTitleViewWithImage:(UIImage *)image{
     
     UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 3, 44)];
     imgView.contentMode = UIViewContentModeScaleAspectFill;
     imgView.clipsToBounds = NO;
     imgView.image = image;
     self.navigationItem.titleView = imgView;
-}
+} */
 
 #pragma mark - Left bar buttons
 #pragma mark -
@@ -94,6 +119,8 @@ typedef enum BUTTON_SELECTORS{
 
 -(void)setLeftBarButtonItemWithKey:(NSString *)key isDefault:(BOOL)isDefault withSelectorBlock:(LeftAction_BlockSelector)block{
     
+    self.navigationController.navigationBar.tintColor = [UIColor clearColor];
+    
     self.navigationItem.hidesBackButton = YES;
     [self getSharedNavBar].defaultLeftPop = NO;
     
@@ -114,6 +141,8 @@ typedef enum BUTTON_SELECTORS{
 #pragma mark - Right bar buttons
 #pragma mark -
 -(void)setRightBarButtonItemWithKey:(NSString *)key isDefault:(BOOL)isDefault{
+    
+    self.navigationController.navigationBar.tintColor = [UIColor clearColor];
     SMTSharedNavigationBar * snb = [self getSharedNavBar];
     
     UIButton * btn = (UIButton *)[snb.buttonList valueForKey:key];
@@ -128,6 +157,8 @@ typedef enum BUTTON_SELECTORS{
 
 -(void)setRightBarButtonItemWithKey:(NSString *)key isDefault:(BOOL)isDefault withSelectorBlock:(RightAction_BlockSelector)block{
     
+    self.navigationController.navigationBar.tintColor = [UIColor clearColor];
+
     SMTSharedNavigationBar * snb = [self getSharedNavBar];
     self.navigationItem.hidesBackButton = YES;
     UIButton * btn = (UIButton *)[snb.buttonList valueForKey:key];
@@ -166,10 +197,26 @@ typedef enum BUTTON_SELECTORS{
     if(snb.defaultRightButton){
         self.navigationItem.rightBarButtonItem = [self convertToBarButtonItem:snb.defaultRightButton withSelector:RIGHT_BUTTON_ACTION];
     }
+    NSLog(@"default title %@",snb.defaultTitle);
     
     if (snb.defaultTitle) {
+        NSLog(@"loading defaults");
+        
         self.navigationItem.title = snb.defaultTitle;
     }
+    
+    if (snb.defaultTitleView){
+       // [self getSharedNavBar].imgView.image = titleImg;
+        
+        [self getSharedNavBar].imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 3, 44)];
+        [self getSharedNavBar].imgView.contentMode = UIViewContentModeScaleAspectFill;
+        [self getSharedNavBar].imgView.clipsToBounds = NO;
+        [self getSharedNavBar].imgView.image = snb.defaultTitleView;
+        self.navigationItem.titleView = [self getSharedNavBar].imgView;
+        
+        NSLog(@"img : %@", snb.imgView.image);
+    }
+    
 }
 
 -(UIBarButtonItem *)convertToBarButtonItem:(UIButton *)btn withSelector:(BUTTON_SELECTORS)selectors{

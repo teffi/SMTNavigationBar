@@ -58,7 +58,24 @@ typedef void (^RightAction_BlockSelector)(UIViewController * vc);
  *  @param isPop     BOOL : YES if the button calls popViewController:Animated
  */
 
--(void)createTitleWithKey:(NSString *)key title:(NSString *)title;
+-(void)createTitleWithKey:(NSString *)key;
+
+/**
+ * Create navigation bar title
+ *
+ * @param key       NSString : key
+ *
+ */
+
+//-(void)createTitleViewWithKey:(NSString *)key titleImg:(UIImage *)titleImg;
+-(void)createTitleViewWithKey:(NSString *)key;
+
+/**
+ * Create navigation bar title view
+ *
+ * @param key       NSString : key
+ *
+ */
 
 //-(void)setTitle:(NSString *)title;
 -(void)setTitle:(NSString *)title key:(NSString *)key isDefault:(BOOL)isDefault;
@@ -71,12 +88,13 @@ typedef void (^RightAction_BlockSelector)(UIViewController * vc);
  *
  */
 
--(void)setTitleViewWithImage:(UIImage *)image;
+-(void)setTitleViewWithImage:(UIImage *)image key:(NSString *)key isDefault:(BOOL)isDefault;
 /**
  * Set navigation bar title with image
  *
  * @param image       UIImage : image
- * @param title     NSString : title
+ * @param key         NSString: key
+ * @param isDefault   BOOL    : isDefault
  *
  */
 

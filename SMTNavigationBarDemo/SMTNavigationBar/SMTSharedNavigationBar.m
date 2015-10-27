@@ -38,7 +38,7 @@
     [_buttonList setValue:btn forKey:key];
 }
 
-#pragma mark - Adding view
+#pragma mark - Adding title
 #pragma mark -
 -(void)addTitleList:(NSString *)key title:(NSString *)title{
 
@@ -49,6 +49,17 @@
     
 }
 
+#pragma mark - Adding titleView
+#pragma mark -
+-(void)addTitleViewList:(NSString *)key titleView:(UIImage *)titleView{
+
+    if (_titleViewList == nil) {
+        _titleViewList = [[NSMutableDictionary alloc]init];
+    }
+    [_titleViewList setValue:titleView forKey:key];
+
+}
+
 #pragma mark - Set DefaultTitle
 #pragma mark -
 -(NSString *)defaultTitle{
@@ -57,6 +68,18 @@
     
     return _defaultTitle;
 
+}
+
+-(UIImage *)defaultTitleView{
+
+    return _defaultTitleView;
+    
+}
+
+-(UIImageView *)imgView{
+
+    return _imgView;
+    
 }
 
 #pragma mark - Set DefaultButtons
@@ -98,6 +121,7 @@
     self.defaultLeftButton = nil;
     self.defaultLeftPop = NO;
     self.defaultTitle = nil;
+  //  self.defaultTitleView = nil;
 }
 
 

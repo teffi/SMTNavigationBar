@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SMTNavigationBar"
-  s.version      = "1.2.0"
+  s.version      = "1.2.1"
   s.summary      = "Customize iOS Navigation Bar items conveniently."
 
  # s.description  = ""
@@ -70,7 +70,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/teffi/SMTNavigationBar.git", :tag => "v1.0.0" }
+  s.source       = { :git => "https://github.com/teffi/SMTNavigationBar.git", :tag => "v1.2.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

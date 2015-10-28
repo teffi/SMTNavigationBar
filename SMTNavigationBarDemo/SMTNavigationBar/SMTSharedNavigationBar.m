@@ -51,13 +51,12 @@
 
 #pragma mark - Adding titleView
 #pragma mark -
--(void)addTitleViewList:(NSString *)key titleView:(UIImage *)titleView{
+-(void)addTitleViewList:(NSString *)key titleView:(UIView *)titleView{
 
     if (_titleViewList == nil) {
         _titleViewList = [[NSMutableDictionary alloc]init];
     }
     [_titleViewList setValue:titleView forKey:key];
-
 }
 
 #pragma mark - Set DefaultTitle
@@ -70,16 +69,12 @@
 
 }
 
--(UIImage *)defaultTitleView{
-
+-(UIView *)defaultTitleView{
+    if([_defaultTitleView isKindOfClass:[UIImageView class]]){
+        UIImageView * v = (UIImageView *)_defaultTitleView;
+        _defaultTitleViewImage = v.image;
+    }
     return _defaultTitleView;
-    
-}
-
--(UIImageView *)imgView{
-
-    return _imgView;
-    
 }
 
 #pragma mark - Set DefaultButtons
@@ -121,7 +116,7 @@
     self.defaultLeftButton = nil;
     self.defaultLeftPop = NO;
     self.defaultTitle = nil;
-  //  self.defaultTitleView = nil;
+    self.defaultTitleView = nil;
 }
 
 

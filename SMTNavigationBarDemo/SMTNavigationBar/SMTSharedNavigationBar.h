@@ -44,9 +44,8 @@ typedef void (^LeftDefault_BlockSelector)(UIViewController * vc);
 @property(nonatomic,strong)UIButton * defaultRightButton;
 
 @property(nonatomic, strong)NSString * defaultTitle;
-@property(nonatomic, strong)UIImage * defaultTitleView;
-
-@property(nonatomic, strong)UIImageView * imgView;
+@property(nonatomic, strong)UIView * defaultTitleView;
+@property(nonatomic, strong)UIImage * defaultTitleViewImage;
 
 @property(nonatomic)BOOL willHideBackBtnAlways;
 @property(nonatomic)BOOL getLeftSuperBlock;
@@ -57,7 +56,7 @@ typedef void (^LeftDefault_BlockSelector)(UIViewController * vc);
 @property(nonatomic,copy)RightAction_BlockSelector rightActionBlock;
 -(void)addToButtonList:(NSString *)key button:(UIButton *)btn;
 -(void)addTitleList:(NSString *)key title:(NSString *)title;
--(void)addTitleViewList:(NSString *)key titleView:(UIImage *)titleView;
+-(void)addTitleViewList:(NSString *)key titleView:(UIView *)titleView;
 
 -(void)runLeftActionBlockSelector:(LeftAction_BlockSelector)block;
 -(void)runRightActionBlockSelector:(RightAction_BlockSelector)block;

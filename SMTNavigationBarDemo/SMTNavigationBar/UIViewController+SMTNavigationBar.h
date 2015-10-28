@@ -69,11 +69,11 @@ typedef void (^RightAction_BlockSelector)(UIViewController * vc);
 /**
  * Set navigation bar title
  *
- * @param key         NSString: key
+ * @param title       NSString:
  * @param isDefault   BOOL    : isDefault
  *
  */
--(void)setTitle:(NSString *)title key:(NSString *)key isDefault:(BOOL)isDefault;
+-(void)setTitle:(NSString *)title isDefault:(BOOL)isDefault;
 
 /**
  * Set navigation bar titleView

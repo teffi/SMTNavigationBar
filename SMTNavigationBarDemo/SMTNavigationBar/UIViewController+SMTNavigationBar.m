@@ -44,15 +44,12 @@ typedef enum BUTTON_SELECTORS{
 
 #pragma mark - Set title view
 #pragma mark -
--(void)setTitle:(NSString *)title key:(NSString *)key isDefault:(BOOL)isDefault{
-    
-    [[self getSharedNavBar] addTitleList:key title:title];
-    
-    NSString * titleStr = [(NSString *)[self getSharedNavBar].titleList valueForKey:key];
+-(void)setTitle:(NSString *)title isDefault:(BOOL)isDefault{
 
     self.navigationItem.titleView = nil;
+    
     if(isDefault){
-        [self getSharedNavBar].defaultTitle = titleStr;
+        [self getSharedNavBar].defaultTitle = title;
     }
     self.navigationItem.title = title;
 }

@@ -30,6 +30,13 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum DEFAULT_ITEMS{
+    LEFT_ITEM,
+    RIGHT_ITEM,
+    TITLEVIEW_ITEM,
+    TITLE_ITEM
+}DEFAULT_ITEMS;
+
 typedef void (^LeftAction_BlockSelector)(UIViewController * vc);
 typedef void (^RightAction_BlockSelector)(UIViewController * vc);
 
@@ -50,52 +57,39 @@ typedef void (^RightAction_BlockSelector)(UIViewController * vc);
  *  @param btn UIButton
  */
 -(void)createButtonWithKey:(NSString *)key button:(UIButton *)btn;
+
+/**
+ *  Create TitleView which you is accessible on all viewcontroller
+ *
+ *  @param key titleview keyname
+ *  @param titleview UIView
+ */
+-(void)createTitleViewWithKey:(NSString *)key titleview:(UIView *)v;
+
+/**
+ * Set navigation bar title
+ *
+ * @param key         NSString: key
+ * @param isDefault   BOOL    : isDefault
+ *
+ */
+-(void)setTitle:(NSString *)title key:(NSString *)key isDefault:(BOOL)isDefault;
+
+/**
+ * Set navigation bar titleView
+ *
+ * @param key       NSString : key
+ * @param isDefault BOOL     : isDefault
+ *
+ */
+-(void)setTitleViewWithKey:(NSString *)key isDefault:(BOOL)isDefault;
+
 /**
  *  Set left bar button item by calling the button you've created.
  *
  *  @param key       NSString : button keyname - identifier
  *  @param isDefault BOOL : Setting to YES will include this on [loadDefaults]
  *  @param isPop     BOOL : YES if the button calls popViewController:Animated
- */
-
--(void)createTitleWithKey:(NSString *)key;
-
-/**
- * Create navigation bar title
- *
- * @param key       NSString : key
- *
- */
-
-//-(void)createTitleViewWithKey:(NSString *)key titleImg:(UIImage *)titleImg;
--(void)createTitleViewWithKey:(NSString *)key;
-
-/**
- * Create navigation bar title view
- *
- * @param key       NSString : key
- *
- */
-
-//-(void)setTitle:(NSString *)title;
--(void)setTitle:(NSString *)title key:(NSString *)key isDefault:(BOOL)isDefault;
-/**
- * Set navigation bar title
- *
- * @param title     NSString : title
- * @param key       NSString : key
- * @param isDefault BOOL     : isDefault
- *
- */
-
--(void)setTitleViewWithImage:(UIImage *)image key:(NSString *)key isDefault:(BOOL)isDefault;
-/**
- * Set navigation bar title with image
- *
- * @param image       UIImage : image
- * @param key         NSString: key
- * @param isDefault   BOOL    : isDefault
- *
  */
 
 -(void)setLeftBarButtonItemWithKey:(NSString *)key isDefault:(BOOL)isDefault isPop:(BOOL)isPop;
@@ -131,7 +125,13 @@ typedef void (^RightAction_BlockSelector)(UIViewController * vc);
  */
 -(void)loadDefaults;
 /**
- *  Reset values
+ *  Set specific default items to load.
+ *
+ *  @param item      LEFT_ITEM,RIGHT_ITEM,TITLE_ITEM,TITLEVIEW_ITEM
+ */
+-(void)loadDefaultWithItem:(DEFAULT_ITEMS)item;
+/**
+ *  Reset values - Set all default properties and blocks to nil
  */
 -(void)resetSMTNavigationBar;
 /**
@@ -139,12 +139,10 @@ typedef void (^RightAction_BlockSelector)(UIViewController * vc);
  *            - Controller loses self reference when presented coming from a POP.
  */
 -(void)updateSelfReference;
-
 /**
  *  Run the block methods declared prior
  */
 -(void)runLeftSuperBlock;
-
 
 /**
  *  Run the block methods declared prior

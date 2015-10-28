@@ -17,6 +17,7 @@ typedef enum BUTTON_SELECTORS{
     
 }BUTTON_SELECTORS;
 
+
 @implementation UIViewController (SMTNavigationBar)
 
 #pragma mark - Navigationbar configs
@@ -34,64 +35,36 @@ typedef enum BUTTON_SELECTORS{
     [[self getSharedNavBar] addToButtonList:key button:btn];
 }
 
--(void)createTitleWithKey:(NSString *)key{
-    [[self getSharedNavBar] addTitleList:key title:@""];
-}
-
 //-(void)createTitleViewWithKey:(NSString *)key titleImg:(UIImage *)titleImg{
 
--(void)createTitleViewWithKey:(NSString *)key{
+-(void)createTitleViewWithKey:(NSString *)key titleview:(UIView *)v{
  
-    [[self getSharedNavBar] addTitleViewList:key titleView:nil];
-
+    [[self getSharedNavBar] addTitleViewList:key titleView:v];
 }
 
 #pragma mark - Set title view
 #pragma mark -
 -(void)setTitle:(NSString *)title key:(NSString *)key isDefault:(BOOL)isDefault{
     
-    [[self getSharedNavBar].titleList setObject:title forKey:key];
+    [[self getSharedNavBar] addTitleList:key title:title];
+    
     NSString * titleStr = [(NSString *)[self getSharedNavBar].titleList valueForKey:key];
-    
-   // [self getSharedNavBar].defaultTitleView = isDefault? view:title;
-    
+
+    self.navigationItem.titleView = nil;
     if(isDefault){
-    [self getSharedNavBar].defaultTitle = titleStr;
+        [self getSharedNavBar].defaultTitle = titleStr;
     }
-    else{
-        self.navigationItem.title = title;
-    }
+    self.navigationItem.title = title;
 }
 
--(void)setTitleViewWithImage:(UIImage *)image key:(NSString *)key isDefault:(BOOL)isDefault{
-
-    [[self getSharedNavBar].titleViewList setObject:image forKey:key];
-    UIImage * img = [(UIImage *)[self getSharedNavBar].titleViewList valueForKey:key];
+-(void)setTitleViewWithKey:(NSString *)key isDefault:(BOOL)isDefault{
     
+    UIView * tView = [(UIView *)[self getSharedNavBar].titleViewList valueForKey:key];
     if (isDefault) {
-        [self getSharedNavBar].defaultTitleView = img;
-        [self getSharedNavBar].imgView.image = [self getSharedNavBar].defaultTitleView;
-        self.navigationItem.titleView = [self getSharedNavBar].imgView;
+        [self getSharedNavBar].defaultTitleView = tView;
     }
-    else{
-        [self getSharedNavBar].imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 3, 44)];
-        [self getSharedNavBar].imgView.contentMode = UIViewContentModeScaleAspectFill;
-        [self getSharedNavBar].imgView.clipsToBounds = NO;
-        [self getSharedNavBar].imgView.image = img;
-        self.navigationItem.titleView = [self getSharedNavBar].imgView;
-    }
-        NSLog(@"titleimg : %@", [self getSharedNavBar].imgView.image);
-
+    self.navigationItem.titleView = tView;
 }
-
-/**-(void)setTitleViewWithImage:(UIImage *)image{
-    
-    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 3, 44)];
-    imgView.contentMode = UIViewContentModeScaleAspectFill;
-    imgView.clipsToBounds = NO;
-    imgView.image = image;
-    self.navigationItem.titleView = imgView;
-} */
 
 #pragma mark - Left bar buttons
 #pragma mark -
@@ -175,73 +148,6 @@ typedef enum BUTTON_SELECTORS{
     self.navigationItem.rightBarButtonItem = barBtn;
 }
 
--(void)loadDefaults{
-    SMTSharedNavigationBar * snb = [self getSharedNavBar];
-    //NSLog(@"load defaults");
-    
-    //Controller loses self reference when presented coming from a POP.
-    //Sol: Update self reference
-    [self updateSelfReference];
-    
-    self.navigationItem.hidesBackButton = snb.willHideBackBtnAlways;
-
-    if(snb.defaultLeftButton){
-        
-        if(snb.defaultLeftPop){
-             self.navigationItem.leftBarButtonItem = [self convertToBarButtonItem:snb.defaultLeftButton withSelector:POP_ACTION];
-        }else{
-            self.navigationItem.leftBarButtonItem = [self convertToBarButtonItem:snb.defaultLeftButton withSelector:LEFT_BUTTON_ACTION];
-        }
-    }
-    
-    if(snb.defaultRightButton){
-        self.navigationItem.rightBarButtonItem = [self convertToBarButtonItem:snb.defaultRightButton withSelector:RIGHT_BUTTON_ACTION];
-    }
-    NSLog(@"default title %@",snb.defaultTitle);
-    
-    if (snb.defaultTitle) {
-        NSLog(@"loading defaults");
-        
-        self.navigationItem.title = snb.defaultTitle;
-    }
-    
-    if (snb.defaultTitleView){
-       // [self getSharedNavBar].imgView.image = titleImg;
-        
-        [self getSharedNavBar].imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 3, 44)];
-        [self getSharedNavBar].imgView.contentMode = UIViewContentModeScaleAspectFill;
-        [self getSharedNavBar].imgView.clipsToBounds = NO;
-        [self getSharedNavBar].imgView.image = snb.defaultTitleView;
-        self.navigationItem.titleView = [self getSharedNavBar].imgView;
-        
-        NSLog(@"img : %@", snb.imgView.image);
-    }
-    
-}
-
--(UIBarButtonItem *)convertToBarButtonItem:(UIButton *)btn withSelector:(BUTTON_SELECTORS)selectors{
-    
-    //Safe mechanism: Need to clear targets to flush selectors associated with the btn.
-    [self clearTargetOfBtn:btn];
-    
-    switch (selectors) {
-        case 0:
-            [btn addTarget:self action:@selector(SMTNavigationBarDidTapLeftItem) forControlEvents:UIControlEventTouchUpInside];
-            break;
-        case 1:
-            [btn addTarget:self action:@selector(SMTNavigationBarDidTapRightItem) forControlEvents:UIControlEventTouchUpInside];
-            break;
-        case 2:
-            [btn addTarget:self action:@selector(SMTNavigationBarDidPop) forControlEvents:UIControlEventTouchUpInside];
-            break;
-        default:
-            break;
-    }
-    
-    UIBarButtonItem * barBtn = [[UIBarButtonItem alloc]initWithCustomView:btn];
-    return barBtn;
-}
-
 #pragma mark - Target Selectors
 #pragma mark -
 -(void)SMTNavigationBarDidTapLeftItem{
@@ -281,6 +187,29 @@ typedef enum BUTTON_SELECTORS{
 
 #pragma mark - Utility
 #pragma mark -
+-(UIBarButtonItem *)convertToBarButtonItem:(UIButton *)btn withSelector:(BUTTON_SELECTORS)selectors{
+    
+    //Safe mechanism: Need to clear targets to flush selectors associated with the btn.
+    [self clearTargetOfBtn:btn];
+    
+    switch (selectors) {
+        case 0:
+            [btn addTarget:self action:@selector(SMTNavigationBarDidTapLeftItem) forControlEvents:UIControlEventTouchUpInside];
+            break;
+        case 1:
+            [btn addTarget:self action:@selector(SMTNavigationBarDidTapRightItem) forControlEvents:UIControlEventTouchUpInside];
+            break;
+        case 2:
+            [btn addTarget:self action:@selector(SMTNavigationBarDidPop) forControlEvents:UIControlEventTouchUpInside];
+            break;
+        default:
+            break;
+    }
+    
+    UIBarButtonItem * barBtn = [[UIBarButtonItem alloc]initWithCustomView:btn];
+    return barBtn;
+}
+
 -(SMTSharedNavigationBar *)getSharedNavBar{
     SMTSharedNavigationBar * snb = [SMTSharedNavigationBar sharedNavigationBar];
     return snb;
@@ -297,9 +226,84 @@ typedef enum BUTTON_SELECTORS{
 -(void)clearSMTNavigationBar{
     self.navigationItem.leftBarButtonItem = nil;
     self.navigationItem.rightBarButtonItem = nil;
+    self.navigationItem.titleView = nil;
+    self.navigationItem.title = nil;
 }
 
 -(void)clearTargetOfBtn:(UIButton *)btn{
     [btn removeTarget:nil action:NULL forControlEvents:UIControlEventTouchUpInside];
 }
+
+#pragma mark - Load defaults
+#pragma mark -
+
+-(void)loadDefaults{
+    SMTSharedNavigationBar * snb = [self getSharedNavBar];
+    //NSLog(@"load defaults");
+    
+    //Controller loses self reference when presented coming from a POP.
+    //Sol: Update self reference
+    [self updateSelfReference];
+    
+    self.navigationItem.hidesBackButton = snb.willHideBackBtnAlways;
+    
+    if(snb.defaultLeftButton){
+        
+        if(snb.defaultLeftPop){
+            self.navigationItem.leftBarButtonItem = [self convertToBarButtonItem:snb.defaultLeftButton withSelector:POP_ACTION];
+        }else{
+            self.navigationItem.leftBarButtonItem = [self convertToBarButtonItem:snb.defaultLeftButton withSelector:LEFT_BUTTON_ACTION];
+        }
+    }
+    
+    if(snb.defaultRightButton){
+        self.navigationItem.rightBarButtonItem = [self convertToBarButtonItem:snb.defaultRightButton withSelector:RIGHT_BUTTON_ACTION];
+    }
+    
+    self.navigationItem.titleView = nil;
+    self.navigationItem.title = nil;
+    
+    if (snb.defaultTitle) {
+        self.navigationItem.title = snb.defaultTitle;
+    }
+ 
+    if (snb.defaultTitleView){
+        /**
+         *  As recommended, keep loadDefaults on viewWillAppear.
+         *  Need to re-alloc defaultTitleView to avoid it in being overriden on
+         *  viewWillAppear.
+         *  Overriden behaviour: The titleview disappears on the navigation bar
+         *  even if defaultTitleView value is existing.
+         */
+        UIImageView * imgView = [[UIImageView alloc]initWithFrame:snb.defaultTitleView.frame];
+        imgView.image = snb.defaultTitleViewImage;
+        self.navigationItem.titleView = imgView;        
+    }
+    
+}
+
+-(void)loadDefaultWithItem:(DEFAULT_ITEMS)item{
+    SMTSharedNavigationBar * snb = [self getSharedNavBar];
+    [self updateSelfReference];
+    
+    switch (item) {
+        case LEFT_ITEM:
+            self.navigationItem.leftBarButtonItem = [self convertToBarButtonItem:snb.defaultLeftButton withSelector:LEFT_BUTTON_ACTION];
+            break;
+        case RIGHT_ITEM:
+            self.navigationItem.rightBarButtonItem = [self convertToBarButtonItem:snb.defaultRightButton withSelector:RIGHT_BUTTON_ACTION];
+            break;
+        case TITLE_ITEM:
+            self.navigationItem.title = snb.defaultTitle;
+            break;
+        case TITLEVIEW_ITEM:
+            self.navigationItem.titleView = snb.defaultTitleView;
+            break;
+        default:
+            NSLog(@"Item couldnt be found.");
+            break;
+    }
+
+}
+
 @end

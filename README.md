@@ -33,6 +33,16 @@ pod 'SMTNavigationBar'
     [self loadDefaults];
     }
 ```
+##### Load defaults individually  
+```objc
+/* List of items
+    LEFT_ITEM
+    RIGHT_ITEM
+    TITLE_ITEM
+    TITLEVIEW_ITEM
+*/
+[self loadDefaultWithItem:RIGHT_ITEM];
+```
 
 #### Button Target Selectors
 
@@ -69,24 +79,55 @@ pod 'SMTNavigationBar'
     -(void)SMTNavigationBarDidTapRightItem
     -(void)SMTNavigationBarDidPop
 ```
+##### Create titleview
+```objc
+ UIImageView * imgView =[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png"]];
+ imgView.contentMode = UIViewContentModeScaleAspectFill;
+ imgView.clipsToBounds = NO;
+ [self createTitleViewWithKey:@"titleView" titleview:imgView];
+```
+##### Set titleview
+```objc
+ [self setTitleViewWithKey:@"titleView" isDefault:YES];
+```
+
+##### Set title
+```objc
+[self setTitle:@"ABC" isDefault:YES];
+```
 
 ###### See demo project for more detailed implementation
 
 ## Version
-1.0
+1.2
+
+### Change log
+v.1.2
+- Added titleview customization
+- Added support for navigation title
+- Added loading of default items individually
+- Included new titleview and title on reset and clear.
+
+v.1.0
+- Setting bar items
+- Bar items block selectors
+- Resetting values
+- Clearing navigation bar
+
 
 ### Next Steps
 
-- Titleview customization
 - Navigation bar configuration
 - Swift counterpart
 - Better documentation writeup
 
-### Contributing
-Fork, implement, pull request. Let us collaborate!
+### Contributors
+riza027 - https://github.com/riza027/
+
+### Lets build together!
+Fork, implement, pull request. 
 
 ### Copyright
 Copyright (c) 2015 [Steffi Tan](http://iamsteffi.com)  
 See MIT-LICENSE for further details.
-
 

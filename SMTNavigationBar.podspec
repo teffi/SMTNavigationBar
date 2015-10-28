@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SMTNavigationBar"
-  s.version      = "1.0.0"
+  s.version      = "1.2.0"
   s.summary      = "Customize iOS Navigation Bar items conveniently."
 
  # s.description  = ""

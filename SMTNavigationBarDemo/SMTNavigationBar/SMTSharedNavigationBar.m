@@ -38,17 +38,6 @@
     [_buttonList setValue:btn forKey:key];
 }
 
-#pragma mark - Adding title
-#pragma mark -
--(void)addTitleList:(NSString *)key title:(NSString *)title{
-
-    if (_titleList == nil) {
-        _titleList = [[NSMutableDictionary alloc]init];
-    }
-    [_titleList setValue:title forKey:key];
-    
-}
-
 #pragma mark - Adding titleView
 #pragma mark -
 -(void)addTitleViewList:(NSString *)key titleView:(UIView *)titleView{

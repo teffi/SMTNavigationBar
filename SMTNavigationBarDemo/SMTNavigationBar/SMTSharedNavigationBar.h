@@ -55,7 +55,6 @@ typedef void (^LeftDefault_BlockSelector)(UIViewController * vc);
 @property(nonatomic,copy)LeftAction_BlockSelector leftActionBlock;
 @property(nonatomic,copy)RightAction_BlockSelector rightActionBlock;
 -(void)addToButtonList:(NSString *)key button:(UIButton *)btn;
--(void)addTitleList:(NSString *)key title:(NSString *)title;
 -(void)addTitleViewList:(NSString *)key titleView:(UIView *)titleView;
 
 -(void)runLeftActionBlockSelector:(LeftAction_BlockSelector)block;

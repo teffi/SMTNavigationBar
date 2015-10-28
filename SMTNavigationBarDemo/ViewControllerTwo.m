@@ -19,16 +19,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
    // [self setTitleViewWithImage:[UIImage imageNamed:@"logo.png"]];
-    [self setTitle:@"ABC" key:@"title" isDefault:NO];
+
    // [self setTitleViewWithImage:[UIImage imageNamed:@"eily.jpg"] key:@"titleImg" isDefault:NO];
-
-
-
 }
 
 //IMPORTANT: Reference should always be updated on viewWillAppear
 -(void)viewWillAppear:(BOOL)animated{
-    [self loadDefaults];
+    
+    //Load defaults per item view loadDefaultWithItem:(DEFAULT_ITEM)
+    [self loadDefaultWithItem:LEFT_ITEM];
+    [self loadDefaultWithItem:RIGHT_ITEM];
+    
+    [self setTitle:@"ABC" key:@"title" isDefault:YES];
+
 }
 
 - (void)didReceiveMemoryWarning {

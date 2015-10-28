@@ -18,20 +18,28 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self willHideBackButton:YES isAlways:YES];
-   // [self setTitle:@"FIRST"];
-    [self createButtons];
-    
-    //[self setTitle:@"HELLO WORLD" key:@"title" isDefault:YES];
-    
-    [self setTitleViewWithImage:[UIImage imageNamed:@"logo.png"] key:@"titleImg" isDefault:NO];
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    //Call clear / reset to start with a clean slate.
     
+    //Clear - set current navigation bar titleview,title,leftbaritem,rightbaritem to nil
     [self clearSMTNavigationBar];
+    //Reset - set all defaults to nil - including blocks.
     [self resetSMTNavigationBar];
-     [self loadDefaults];
+    
+    [self createButtons];
+    
+    UIImageView * imgView;
+    if(imgView == nil) {
+        imgView =[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png"]];
+        imgView.contentMode = UIViewContentModeScaleAspectFill;
+        imgView.clipsToBounds = NO;
+    }
+    
+    [self createTitleViewWithKey:@"titleView" titleview:imgView];
+    [self setTitleViewWithKey:@"titleView" isDefault:YES];
+
 }
 
 -(IBAction)bothCustomDefault:(id)sender{
@@ -55,8 +63,6 @@
      NSLog(@"This is the block method generated on first VC but is now being presented in %@",vc.navigationItem.title);
         
      }];
-
-  //  [self setRightBarButtonItemWithKey:@"rightBtn" isDefault:NO];
     
     [self performSegueWithIdentifier:@"pushSegue" sender:sender];
 }
@@ -80,11 +86,7 @@
     //Create key value buttons. Access universally via SMTNavigationBar
     [self createButtonWithKey:@"leftBtn" button:leftBtn];
     [self createButtonWithKey:@"rightBtn" button:rightBtn];
-  //  [self createTitleWithKey:@"title"];
 
-  //  [self createTitleViewWithKey:@"titleImg" titleImg:[UIImage imageNamed:@"logo.png"]];
-    [self createTitleViewWithKey:@"titleImg"];
-    
 }
 
 - (void)didReceiveMemoryWarning {

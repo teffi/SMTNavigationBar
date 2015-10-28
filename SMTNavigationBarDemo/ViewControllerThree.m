@@ -21,6 +21,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [self loadDefaults];
+    self.navigationItem.titleView = nil;
 }
 
 - (void)didReceiveMemoryWarning {

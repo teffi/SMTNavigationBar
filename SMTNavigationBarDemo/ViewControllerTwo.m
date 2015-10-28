@@ -30,7 +30,7 @@
     [self loadDefaultWithItem:LEFT_ITEM];
     [self loadDefaultWithItem:RIGHT_ITEM];
     
-    [self setTitle:@"ABC" key:@"title" isDefault:YES];
+    [self setTitle:@"ABC" isDefault:YES];
 
 }
 

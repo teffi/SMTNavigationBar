@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B9EF0551BCB5F3A0080813C /* ViewControllerThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9EF0541BCB5F3A0080813C /* ViewControllerThree.m */; settings = {ASSET_TAGS = (); }; };
-		6B9EF0561BCB5F3A0080813C /* ViewControllerThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9EF0541BCB5F3A0080813C /* ViewControllerThree.m */; settings = {ASSET_TAGS = (); }; };
-		6B9EF0571BCB5F3A0080813C /* ViewControllerThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9EF0541BCB5F3A0080813C /* ViewControllerThree.m */; settings = {ASSET_TAGS = (); }; };
+		6B3011991BE05A620070412C /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3011971BE05A620070412C /* logo.png */; };
+		6B30119A1BE05A620070412C /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3011981BE05A620070412C /* logo@2x.png */; };
+		6B9EF0551BCB5F3A0080813C /* ViewControllerThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9EF0541BCB5F3A0080813C /* ViewControllerThree.m */; };
+		6B9EF0561BCB5F3A0080813C /* ViewControllerThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9EF0541BCB5F3A0080813C /* ViewControllerThree.m */; };
+		6B9EF0571BCB5F3A0080813C /* ViewControllerThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9EF0541BCB5F3A0080813C /* ViewControllerThree.m */; };
 		6BAF9A521BC79B450042019D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF9A511BC79B450042019D /* main.m */; };
 		6BAF9A551BC79B450042019D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF9A541BC79B450042019D /* AppDelegate.m */; };
 		6BAF9A581BC79B450042019D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF9A571BC79B450042019D /* ViewController.m */; };
@@ -18,11 +20,11 @@
 		6BAF9A601BC79B450042019D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BAF9A5E1BC79B450042019D /* LaunchScreen.storyboard */; };
 		6BAF9A6B1BC79B450042019D /* SMTNavigationBarDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF9A6A1BC79B450042019D /* SMTNavigationBarDemoTests.m */; };
 		6BAF9A761BC79B450042019D /* SMTNavigationBarDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF9A751BC79B450042019D /* SMTNavigationBarDemoUITests.m */; };
-		6BAF9A881BC79C3D0042019D /* SMTSharedNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF9A851BC79C3D0042019D /* SMTSharedNavigationBar.m */; settings = {ASSET_TAGS = (); }; };
-		6BAF9A891BC79C3D0042019D /* UIViewController+SMTNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF9A871BC79C3D0042019D /* UIViewController+SMTNavigationBar.m */; settings = {ASSET_TAGS = (); }; };
-		6BAF9A8C1BC7A1440042019D /* ViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF9A8B1BC7A1440042019D /* ViewControllerTwo.m */; settings = {ASSET_TAGS = (); }; };
-		6BAF9A8D1BC7A1440042019D /* ViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF9A8B1BC7A1440042019D /* ViewControllerTwo.m */; settings = {ASSET_TAGS = (); }; };
-		6BAF9A8E1BC7A1440042019D /* ViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF9A8B1BC7A1440042019D /* ViewControllerTwo.m */; settings = {ASSET_TAGS = (); }; };
+		6BAF9A881BC79C3D0042019D /* SMTSharedNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF9A851BC79C3D0042019D /* SMTSharedNavigationBar.m */; };
+		6BAF9A891BC79C3D0042019D /* UIViewController+SMTNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF9A871BC79C3D0042019D /* UIViewController+SMTNavigationBar.m */; };
+		6BAF9A8C1BC7A1440042019D /* ViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF9A8B1BC7A1440042019D /* ViewControllerTwo.m */; };
+		6BAF9A8D1BC7A1440042019D /* ViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF9A8B1BC7A1440042019D /* ViewControllerTwo.m */; };
+		6BAF9A8E1BC7A1440042019D /* ViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF9A8B1BC7A1440042019D /* ViewControllerTwo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B3011971BE05A620070412C /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		6B3011981BE05A620070412C /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
 		6B9EF0531BCB5F3A0080813C /* ViewControllerThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerThree.h; sourceTree = "<group>"; };
 		6B9EF0541BCB5F3A0080813C /* ViewControllerThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerThree.m; sourceTree = "<group>"; };
 		6BAF9A4D1BC79B450042019D /* SMTNavigationBarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMTNavigationBarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +121,8 @@
 		6BAF9A4F1BC79B450042019D /* SMTNavigationBarDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6B3011971BE05A620070412C /* logo.png */,
+				6B3011981BE05A620070412C /* logo@2x.png */,
 				6BAF9A831BC79C3D0042019D /* SMTNavigationBar */,
 				6BAF9A531BC79B450042019D /* AppDelegate.h */,
 				6BAF9A541BC79B450042019D /* AppDelegate.m */,
@@ -275,6 +281,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B30119A1BE05A620070412C /* logo@2x.png in Resources */,
+				6B3011991BE05A620070412C /* logo.png in Resources */,
 				6BAF9A601BC79B450042019D /* LaunchScreen.storyboard in Resources */,
 				6BAF9A5D1BC79B450042019D /* Assets.xcassets in Resources */,
 				6BAF9A5B1BC79B450042019D /* Main.storyboard in Resources */,

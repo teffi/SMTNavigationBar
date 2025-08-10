@@ -127,7 +127,3 @@ riza027 - https://github.com/riza027/
 ### Lets build together!
 Fork, implement, pull request. 
 
-### Copyright
-Copyright (c) 2015 [Steffi Tan](http://iamsteffi.com)  
-See MIT-LICENSE for further details.
-
